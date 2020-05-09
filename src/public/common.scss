@@ -1,0 +1,25 @@
+@import "../layout/layout.scss";
+
+html {
+  --base-black: #222222;
+  --base-gray: #dddddd;
+  --base-white: #ffffff;
+  --base-light-blue: #b3d3f6;
+
+  --base-text: var(--base-black);
+  --base-border: var(--base-gray);
+  --base-button-color: var(--base-white);
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--base-black);
+}
+

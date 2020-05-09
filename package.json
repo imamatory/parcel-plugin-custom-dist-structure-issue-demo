@@ -1,0 +1,78 @@
+{
+  "name": "issue-example",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel watch --log-level 4 src/public/*.pug --out-dir dist --public-url /static/",
+    "clean": "rm -rf dist/*"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-custom-dist-structure": "^1.1.10",
+    "parcel-plugin-local-plugins": "^0.0.3",
+    "postcss-css-variables": "^0.17.0",
+    "postcss-hexrgba": "^2.0.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-media-minmax": "^4.0.0",
+    "postcss-momentum-scrolling": "^2.5.17",
+    "postcss-nested": "^4.2.1",
+    "pug": "^2.0.4",
+    "sass": "^1.26.5"
+  },
+  "browserslist": [
+    "> 0.2%",
+    "not dead",
+    "not ie < 11",
+    "not op_mini all"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-nested": {},
+      "postcss-css-variables": {},
+      "postcss-media-minmax": {},
+      "postcss-hexrgba": {},
+      "postcss-momentum-scrolling": {},
+      "autoprefixer": {}
+    },
+    "postcss-modules": {
+      "generateScopedName": "[name]_[local]_[hash:base64:5]"
+    }
+  },
+  "parcel-plugin-local-plugins": [
+    "./misc/parcel-plugin-django-template"
+  ],
+  "customDistStructure": {
+    "config": {
+      "pages": [
+        ".html"
+      ],
+      "assets/js": [
+        ".js",
+        ".js.map"
+      ],
+      "assets/styles": [
+        ".css",
+        ".css.map"
+      ],
+      "assets/images": [
+        ".jpg",
+        ".png"
+      ],
+      "assets/fonts": [
+        ".woff",
+        ".woff2",
+        ".eot"
+      ]
+    },
+    "options": {
+      "development": true
+    }
+  },
+  "dependencies": {
+    "serve": "^11.3.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "public": "./dist",
+  "rewrites": [
+    { "source": "/static/assets/js/:filename", "destination": "./assets/js/:filename" },
+    { "source": "/static/assets/styles/:filename", "destination": "./assets/styles/:filename" }
+  ]
+}
